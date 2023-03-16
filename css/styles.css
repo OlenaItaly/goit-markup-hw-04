@@ -38,6 +38,7 @@
 
   /* colore background icon */
   --colore-backgrond-icon: #4d5ae5;
+  --colore-backgrond-icon-hf: #404bbf;
   /* =============/COLORI==================== */
 }
 /* ============скидання стилів (параметрів)============ */
@@ -110,6 +111,13 @@ body {
   letter-spacing: 0.02em;
 }
 
+.title-h-four {  
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+
+}
 .title-h-two,
 .title-h-three {
   color: var(--colore-title);
@@ -257,13 +265,16 @@ body {
   color: var(--colore-menu-hfa);
 }
 
-
 /*================= SECTION ================== */
 
 /* ===========section Hero============== */
 .hero {
   background: var(--colore-background-section-navy-blu);
-  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-bg.jpg);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   padding-top: 188px;
@@ -296,6 +307,24 @@ body {
 }
 .about .item {
   width: calc((100% - 72px) / 4);
+}
+.about .item::before {
+  display: block;
+  content: "";
+  height: 112px;
+  
+}
+.about .item:nth-child(1):before {
+  background-image: url(../images/Icon\ 1.svg);
+}
+.about .item:nth-child(2):before {
+  background-image: url(../images/Icon\ 2.svg);
+}
+.about .item:nth-child(3):before {
+  background-image: url(../images/Icon\ 3.svg);
+}
+.about .item:nth-child(4):before {
+  background-image: url(../images/Icon\ 4.svg);
 }
 /* ============section WORK ==================*/
 .work {
@@ -345,8 +374,8 @@ body {
 .title-h-three {
   margin-bottom: 8px;
 }
-.team-text>.text {
-   margin-bottom: 8px;
+.team-text > .text {
+  margin-bottom: 8px;
 }
 .social-list {
   display: flex;
@@ -363,7 +392,37 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: var(--colore-backgrond-icon) ;
+  background-color: var(--colore-backgrond-icon);
+}
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--colore-backgrond-icon-hf);
+}
+/* ================= CUSTOMERS=============== */
+.customers {
+padding-top: 120px;
+  padding-bottom: 120px;
+}
+.customers .title-h-two {
+  margin-bottom: 72px;
+}
+.customers-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.customers-link:hover,
+.customers-link:focus {
+  fill: #404bbf;
+}
+
+
+.customers-item {
+  border: 1px solid var(--color-button-border);
+}
+.customers-item:hover,
+.customers-item:focus {
+  border-color:var(--color-button-secondary);
 }
 /* =================== FOOTER ================ */
 .accent-footer {
@@ -380,6 +439,23 @@ body {
   margin-top: 16px;
 }
 
+.footer > .conteiner {
+  display: flex;
+  gap: 120px;
+}
+.title-h-four {
+  margin-bottom: 16px;
+}
+.social-footer .social-link {
+  background-color: rgba( 255, 255, 255, 0.1);
+}
+.social-footer .social-link:hover,
+.social-footer .social-link:focus {
+  background-color: #31D0AA;
+}
+.social-footer .social-list {
+   gap: 16px;
+}
 /* ======section Portfolio nav================= */
 
 .nav {
@@ -418,4 +494,8 @@ body {
   border: 1px solid var(--colore-border-header);
   border-top: none;
   padding: 32px 16px;
+}
+.card-text:hover,
+.card-text:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
