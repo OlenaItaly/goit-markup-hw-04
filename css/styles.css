@@ -419,10 +419,17 @@ padding-top: 120px;
 
 .customers-item {
   border: 1px solid var(--color-button-border);
+  border-radius:4px ;
 }
 .customers-item:hover,
 .customers-item:focus {
   border-color:var(--color-button-secondary);
+}
+.customer-icon {
+  fill: var(--color-button-border);
+}
+.customer-icon:hover {
+  fill: #404bbf;
 }
 /* =================== FOOTER ================ */
 .accent-footer {
