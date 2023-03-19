@@ -41,6 +41,7 @@
   --colore-backgrond-icon: #4d5ae5;
   --colore-backgrond-icon-hf: #404bbf;
   --color-background-about-icon: #f4f4fd;
+  --color-backgroun-social-hf: #31d0aa;
   /* =============/COLORI==================== */
 }
 /* ============скидання стилів (параметрів)============ */
@@ -321,7 +322,10 @@ body {
   align-items: center;
   justify-content: center;
 }
-
+.about .title-h-three {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
 /* ============section WORK ==================*/
 .work {
   padding-bottom: 120px;
@@ -421,21 +425,17 @@ body {
   border-radius: 4px;
  align-items: center;
  justify-content: center;
+ color: var(--colore-customers-icon)
+}
+.customer-icon {
+  fill: currentColor;
 }
 .customers-link:hover,
 .customers-link:focus {
   border-color:var(--colore-backgrond-icon-hf);
+  color: var(--colore-backgrond-icon-hf);
 } 
-.customers-item:hover,
-.customers-item:focus {
-  border-color: var(--color-button-secondary);
-}
-.customer-icon {
-  fill: var(--colore-customers-icon);
-}
-.customer-icon:hover {
-  fill:var(--colore-backgrond-icon-hf);
-}
+
 /* =================== FOOTER ================ */
 .accent-footer {
   color: var(--coloro-logo-f);
@@ -469,7 +469,7 @@ body {
 }
 .social-footer .social-link:hover,
 .social-footer .social-link:focus {
-  background-color: #31d0aa;
+  background-color:var(--color-backgroun-social-hf);
 }
 .social-footer .social-list {
   gap: 16px;
@@ -505,16 +505,27 @@ body {
 }
 
 .card-item {
+ 
   width: calc((100% - 48px) / 3);
+  
 }
+.card-item .link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
 
+}
 .card-text {
+  width: 360px;
   border: 1px solid var(--colore-border-header);
   border-top: none;
   padding: 32px 16px;
 }
-.card-item:hover,
-.card-item:focus {
+.card-item .link:hover,
+.card-item .link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    
 }
